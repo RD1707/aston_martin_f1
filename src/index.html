@@ -1,34 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aston Martin F1 AMR23</title>
+    <title>Aston Martin F1 AMR23 - Concept</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Uma exploração 3D interativa do carro de Fórmula 1 Aston Martin AMR23, criada com Three.js.">
+
+    <meta property="og:url" content="#">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aston Martin F1 AMR23 - Concept">
+    <meta property="og:description" content="Explore o design e a tecnologia do AMR23 numa experiência 3D imersiva.">
+    <meta property="og:image" content="../static/textures/imageSocial.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="#">
+    <meta name="twitter:title" content="Aston Martin F1 AMR23 - Concept">
+    <meta name="twitter:description" content="Explore o design e a tecnologia do AMR23 numa experiência 3D imersiva.">
+    <meta name="twitter:image" content="../static/textures/imageSocial.jpg">
+
+    <meta name="keywords" content="ThreeJS, Aston Martin, F1, AMR23, WebGL, JavaScript">
+    <meta name="author" content="Seu Nome Aqui">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../static/favicon/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <canvas class="webgl"></canvas>
+    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    <div id="loading-text-intro"><p>CARREGANDO ENGENHARIA DE PRECISÃO</p></div>
 
-    <div class="loading-bar"></div>
-
-    <div class="point point-0">
-        <div class="label">1</div>
-        <div class="text">Asa dianteira: Projetada para máxima eficiência aerodinâmica, guiando o fluxo de ar para o resto do carro.</div>
-    </div>
-    <div class="point point-1">
-        <div class="label">2</div>
-        <div class="text">Cockpit: O centro de controlo do piloto, equipado com tecnologia de ponta para monitorização e performance.</div>
-    </div>
-    <div class="point point-2">
-        <div class="label">3</div>
-        <div class="text">Asa traseira com DRS: Sistema de Redução de Arrasto (DRS) que abre para aumentar a velocidade máxima nas retas.</div>
-    </div>
-
-    <div class="overlay">
-        <div class="text-content">
-            <h1>Aston Martin F1 AMR23</h1>
-            <p>O AMR23 representa a contínua ambição da Aston Martin de competir no topo do automobilismo. Com um design aerodinâmico arrojado e o poderoso motor Mercedes, este carro é uma obra-prima da engenharia moderna. Explore os detalhes que o tornam um competidor formidável nas pistas de Fórmula 1.</p>
-            <button>Explorar</button>
+    <div class="main-container" style="visibility:hidden;">
+        
+        <div class="first">
+            <h2>Performance. Paixão. Precisão.</h2>
+            <h1>ASTON MARTIN AMR23</h1>
+            <p>O AMR23 representa a contínua ambição da Aston Martin de competir no topo do automobilismo. Com um design aerodinâmico arrojado e o poderoso motor Mercedes, este carro é uma obra-prima da engenharia moderna. Role para baixo para explorar os detalhes que o tornam um competidor formidável.</p>
         </div>
+
+        <div class="section second">
+            <div class="second-container">
+                <ul>
+                    <li id="asa-dianteira" class="active">Asa Dianteira</li>
+                    <li id="cockpit">Cockpit</li>
+                    <li id="asa-traseira">Asa Traseira</li>
+                </ul>
+                <p id="content">Projetada para máxima eficiência aerodinâmica, guiando o fluxo de ar para o resto do carro e gerando downforce essencial para as curvas.</p>
+            </div>
+            <div id="canvas-container-details"></div>
+        </div>
+
+        <div id="canvas-container" class="fixed"></div> 
+        
+        <h4 class="footer">Desenvolvido com a ajuda do seu Parceiro de Programação. <a href="#" target="_blank">Créditos do Modelo 3D</a></h4>
     </div>
 </body>
 </html>
