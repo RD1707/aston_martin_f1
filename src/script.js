@@ -111,7 +111,7 @@ scene.add(fillLight)
 
 /////////////////////////////////////////////////////////////////////////
 ///// LOADING GLB/GLTF MODEL FROM BLENDER
-loader.load('models/gltf/graces-draco2.glb', function (gltf) {
+loader.load('models/gltf/aston_martin_f1_amr23_2023.glb', function (gltf) {
 
     gltf.scene.traverse((obj) => {
         if (obj.isMesh) {
@@ -133,7 +133,7 @@ function clearScene(){
 /////////////////////////////////////////////////////////////////////////
 //// INTRO CAMERA ANIMATION USING TWEEN
 function introAnimation() {
-    new TWEEN.Tween(camera.position.set(0,4,2.7)).to({ x: 0, y: 2.4, z: 8.8}, 3500).easing(TWEEN.Easing.Quadratic.InOut).start()
+    new TWEEN.Tween(camera.position.set(0,4,15.7)).to({ x: 0, y: 1, z: 2.8}, 3500).easing(TWEEN.Easing.Quadratic.InOut).start()
     .onComplete(function () {
         TWEEN.remove(this)
         document.querySelector('.header').classList.add('ended')
