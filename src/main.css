@@ -154,7 +154,6 @@ nav.header .a:hover{
     cursor: pointer;
     color: rgb(175, 175, 175); 
     transform: scale(1.1); 
-
 }
 
 nav.header .a:hover ~ .cursor {
@@ -338,17 +337,18 @@ nav.header .a:hover ~ .cursor {
     z-index: 2;
 }
 
+/* --- ALTERAÇÕES ASTON MARTIN --- */
 .second-container>ul>li.active:after {
     content: "";
     top: 20px;
     width: 50px;
     height: 2px;
-    background: #fff;
+    background: #dfff00; /* Amarelo Limão */
     position: relative;
     left: 0px;
     display: block;
+    box-shadow: 0px 0px 10px #dfff00; /* Efeito de brilho */
 }
-
 
 .second-container>ul>li{
     padding-right: 20px;
@@ -356,7 +356,7 @@ nav.header .a:hover ~ .cursor {
 }
 
 .second-container>ul>li:hover{
-    color:whitesmoke;
+    color: #dfff00; /* Amarelo Limão */
     pointer-events: all;
     cursor: pointer;
 }
@@ -364,6 +364,7 @@ nav.header .a:hover ~ .cursor {
 .second-container>ul>li.active{
     color:whitesmoke;
 }
+/* --- FIM DAS ALTERAÇÕES --- */
 
 .second-container>p{
     font-size: 14px;

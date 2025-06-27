@@ -41,7 +41,6 @@ const containerDetails = document.getElementById('canvas-container-details')
 
 /////////////////////////////////////////////////////////////////////////
 ///// GENERAL VARIABLES
-let oldMaterial
 let secondContainer = false
 let width = container.clientWidth
 let height = container.clientHeight
@@ -104,23 +103,27 @@ const sunLight = new DirectionalLight(0x435c72, 0.08)
 sunLight.position.set(-100,0,-100)
 scene.add(sunLight)
 
-const fillLight = new PointLight(0x88b2d9, 2.7, 4, 3)
+// --- ALTERAÇÕES ASTON MARTIN ---
+// LUZ ALTERADA PARA VERDE ASTON MARTIN
+const fillLight = new PointLight(0x26492c, 3.5, 6, 2.5)
 fillLight.position.set(30,3,1.8)
 scene.add(fillLight)
 
 /////////////////////////////////////////////////////////////////////////
 ///// LOADING MODEL
-// Mude o caminho para o seu modelo do Aston Martin
+// Mude o caminho para o seu modelo do Aston Martin se for diferente
 loader.load('models/gltf/aston_martin_f1_amr23_2023.glb', function (gltf) {
-    gltf.scene.scale.set(1.5, 1.5, 1.5) // Ajuste a escala se necessário
-    gltf.scene.position.y = -1.2 // Ajuste a posição vertical
+    // MODELO MAIOR E MAIS PARA CIMA
+    gltf.scene.scale.set(1.6, 1.6, 1.6)
+    gltf.scene.position.y = -0.8
     scene.add(gltf.scene)
 })
+// --- FIM DAS ALTERAÇÕES ---
+
 
 /////////////////////////////////////////////////////////////////////////
 //// INTRO ANIMATION
 function introAnimation() {
-    // Nova animação de câmera para o carro
     new TWEEN.Tween(camera.position.set(0, 10, 15)).to({ x: 0, y: 1.5, z: 12}, 3500).easing(TWEEN.Easing.Quadratic.InOut).start()
     .onComplete(function () {
         TWEEN.remove(this)
